@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: blue;
+  --secondary-color: white;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/* Container Top */
+.container-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 600px;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-img {
+  width: 150px;
+  height: 150px;
+}
+
+.logo-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--primary-color);
+  padding-top: 25px;
+}
+
+.logo-subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--primary-color);
+  text-align: end;
+  padding-top: 25px;
+}
+
+.coracao-img {
+  height: 600px;
+}
+
+/* Container Mid */
+.container-mid {
+  background-color: var(--primary-color);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 40px;
+}
+
+/* Cards Wrapper */
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card-mid {
+  background-color: var(--secondary-color);
+  padding: 40px;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-mid:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  font-size: 48px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: darkblue;
+}
+
+.card-mid h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-mid h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Coleção de Pequenos Guerreiros */
+.colecao-guerreiros {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.colecao-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+}
+
+/* Container de cada livro */
+.livro-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+
+.livro-img {
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.livro-texto {
+  width: 50%;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.livro-texto h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.livro-texto p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Alternar a posição da imagem e do texto para cada livro */
+.livro-container:nth-child(odd) .livro-img {
+  order: 1;
+}
+
+.livro-container:nth-child(odd) .livro-texto {
+  order: 2;
+}
+
+.livro-container:nth-child(even) .livro-img {
+  order: 2;
+}
+
+.livro-container:nth-child(even) .livro-texto {
+  order: 1;
+}
+
+.objetivo-projeto {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: var(--primary-color);
+}
+
+.objetivo-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: var(--secondary-color);
+}
+
+.objetivo-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.objetivo-imagens {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+}
+
+.imagem-objetivo {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--secondary-color);
+}
+
+.objetivo-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px 20px;
+  justify-content: center;
+  width: 50%;
+}
+
+.card {
+  background-color: var(--secondary-color);
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: calc(50% - 20px); /* Ajuste para os dois cards na mesma linha */
+  position: relative; /* Para posicionar o círculo */
+  padding-top: 80px; /* Espaço extra para o círculo */
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+  content: attr(data-number); /* Número customizado de cada card */
+  position: absolute;
+  top: -40px; /* Posiciona o círculo acima do conteúdo do card */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background-color: #dbdd80;
+  color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+  .container-top {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .logo-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .coracao-img {
+    height: 300px;
+  }
+
+  .container-mid {
+    flex-direction: column;
+  }
+
+  .cards-wrapper {
+    flex-direction: column;
+  }
+
+  .card-mid {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .livro-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .livro-texto {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .livro-img {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .objetivo-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .objetivo-imagens,
+  .objetivo-cards {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%; /* Cards em tela cheia no modo responsivo */
+  }
+
+  .card-centralizado {
+    width: 100%; /* Card 3 centralizado no modo responsivo também */
+  }
+}
